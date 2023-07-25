@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Coding Quiz</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class= "large-font">Coding Quiz</div>
+      <h1>Welcome to the coding quiz! Let's test your knowledge on JavaScript</h1>
+      <button class="start-button">Start</button>
+    </header>
+
+    <main>
+     <!-- answers to the questions are hidden -->
+      <div id="quiz-answers" class="hidden">
+        <h3 id="questions"></h3>
+        <button id="ans1"></button>
+        <button id="ans2"></button>
+        <button id="ans3"></button>
+        <button id="ans4"></button>
+    </div>
+
+    <!-- displays response and results -->
+    <section id="response"></section>
+    <div id="results"></div>
+
+    <!-- form for submitting initials -->
+
+
+
+
+
+    
+      <section>
+        <div class="card results">
+          <div class = "win-loss-container">
+          <div>
+          <h2>Wins: <span class="win">0 </span> </h2>
+          <h2>Losses: <span class="lose">0</span></h2>
+        </div>
+          <button class="reset-button">Reset Score</button>
+      </div>
+          <div class= "card timer">
+            <div class = "timer-text">
+            <div class="large-font timer-count">10</div>
+            <h3>seconds remaining</h3>
+          </div>
+        
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
