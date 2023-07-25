@@ -29,34 +29,30 @@
 
     <!-- form for submitting initials -->
     <form method="POST">
-      <div class="input-group">
+      <div class="input-initials">
           <label for="initials">Initials</label>
-          <input type="text" name="initials" id="initials" placeholder="SD" />
+          <input type="text" name="initials" id="initials" placeholder="LM" />
       </div>
     </form>
 
-
-
-
-
+    <section id="score-board">
+      <p>Would you like to submit your score?</p>
+      <button id="submi-button">Submit</button>
+      <div id="high-scores">
+          <p>Highscores: </p>
       <section>
-        <div class="card results">
-          <div class = "win-loss-container">
-          <div>
-          <h2>Wins: <span class="win">0 </span> </h2>
-          <h2>Losses: <span class="lose">0</span></h2>
-        </div>
-          <button class="reset-button">Reset Score</button>
+          <button id="back-button">Go Back</button>
+          <button id="reset-button">Reset Scores</button>
+      </section>
       </div>
+    </section>
+
           <div class= "card timer">
             <div class = "timer-text">
             <div class="large-font timer-count">10</div>
             <h3>seconds remaining</h3>
           </div>
         
-          </div>
-        </div>
-      </section>
     </main>
     <script src="assets/js/script.js"></script>
   </body>
