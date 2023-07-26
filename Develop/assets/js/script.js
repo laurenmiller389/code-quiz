@@ -100,20 +100,25 @@ var quizQuestions = [
 },
 ]
 
+/*
 // The init function is called when the page loads 
 function init() {
   getWins();
   getlosses();
 }
+*/
 
-// The startGame function is called when the start button is clicked
-function startGame() {
-  isWin = false;
-  timerCount = 10;
-  // Prevents start button from being clicked when round is in progress
-  startButton.disabled = true;
-  renderBlanks()
-  startTimer()
+// The startQuiz function is called when the start button is clicked
+function startQuiz() {
+  greeting.classList.add("hidden")
+  quizAnswers.classList.remove("hidden")
+  displayQuestion()
+
+  //startTimer()
+}
+
+function displayQuestion(){
+
 }
 
 // The winGame function is called when the win condition is met
@@ -207,12 +212,20 @@ function getlosses() {
   lose.textContent = loseCounter;
 }
 
-function checkWin() {
-  // If the word equals the blankLetters array when converted to string, set isWin to true
-  if (chosenWord === blanksLetters.join("")) {
-    // This value is used in the timer function to test if win condition is met
-    isWin = true;
+
+function checkAnswer(event) {
+  console.log(event.target.textContent)
+  var currentQuestion = jsQuestions[questionIndex]
+  if(currentQuestion.correctAnswer === event.target.textContent){
+    console.log('correct!');
+    response.textContent = "correct!";
+  } else {
+    console.log('incorrect!');
+    secondsLeft = secondsLeft - 5;
+    response.textContent = "incorrect!";
   }
+  questionIndex++
+  showQuestion();
 }
 
 // Tests if guessed letter is in word and renders it to the screen.
