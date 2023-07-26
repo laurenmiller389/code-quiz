@@ -144,12 +144,13 @@ function startTimer() {
   }, 1000);
 }
 
-// These functions are used by init
-function highScores() {
-  // Get stored value from client storage, if it exists
-  var highscores = localStorage.getItem("highscores");
-  highScores()
-}
+//send message
+function sendMessage() {
+  timeEl.textContent = "Quiz Complete!";
+  var imgElement = document.createElement("img");
+  imgElement.setAttribute("src", "../assets/images/congrats.jpg")
+  mainElement.appendChild(imgElement);
+ }
 
 var questionIndex = 0
 
@@ -172,20 +173,35 @@ function checkAnswer(event) {
 
 // Attach event listener to start button to call startGame function on click
 startButton.addEventListener("click", startQuiz);
-
 // Calls init() so that it fires when page opened
 init();
 
-// Bonus: Add reset button
-var resetButton = document.querySelector(".reset-button");
+//listens for a click to answers
+a1Element.addEventListener('click', checkAnswer)
+a2Element.addEventListener('click', checkAnswer)
+a3Element.addEventListener('click', checkAnswer)
+a4Element.addEventListener('click', checkAnswer)
 
-function resetGame() {
-  // Resets win and loss counts
-  winCounter = 0;
-  loseCounter = 0;
-  // Renders win and loss counts and sets them into client storage
-  setWins()
-  setLosses()
+// These functions are used by init
+function highScores() {
+  // Get stored value from client storage, if it exists
+  var highscores;
+  highscores = localStorage.getItem("highscores");
+  highScores()
 }
-// Attaches event listener to button
-resetButton.addEventListener("click", resetGame);
+
+var initialsInput = document.querySelector("#initials");
+
+submitButton.addEventListener("click", function(event) {
+    event.preventDefault();
+
+    var initials = document.querySelector("#initials").value;
+    if (initials === "") {
+        displayMessage("error", "Initials cannot be blank!");
+    } else {
+        displayMessage("success", "Your scores have been recorded!");
+
+        localStorage.setItem("initials", initials)
+    
+    }
+});
