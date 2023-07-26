@@ -1,23 +1,25 @@
-var wordBlank = document.querySelector(".word-blanks");
-var win = document.querySelector(".win");
-var lose = document.querySelector(".lose");
+//DEPENDENCIES
+var timeElement = document.querySelector("time");
+var mainElement = document.querySelector("main");
+var startButton = document.querySelector("start-button");
+var questionsElement = document.querySelector(".questions");
+var a1Element = document.getElementById("answer-1");
+var a2Element = document.getElementById("answer-2");
+var a3Element = document.getElementById("answer-3");
+var a4Element = document.getElementById("answer-4");
+var greeting = document.getElementById("greeting");
+var response = document.getElementById("response")
 var timerElement = document.querySelector(".timer-count");
-var startButton = document.querySelector(".start-button");
 
-var chosenWord = "";
-var numBlanks = 0;
-var winCounter = 0;
-var loseCounter = 0;
-var isWin = false;
-var timer;
-var timerCount;
+//DATA
+var quizAnswers = document.getElementById("quiz-answers");
+var results = document.getElementById("results");
+var submitButton = document.getElementById("submit-button");
 
-// Arrays used to create blanks and letters on screen
-var lettersInChosenWord = [];
-var blanksLetters = [];
-
-// Array of words the user will guess
-var words = ["variable","array", "modulus", "object", "function", "string", "boolean"];
+// Array of questions
+var quizQuestions = [
+  
+]
 
 // The init function is called when the page loads 
 function init() {
