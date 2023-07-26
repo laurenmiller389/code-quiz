@@ -7,20 +7,22 @@
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
   </head>
   <body>
-    <header>
+    <header class="time"></header>
       <div class= "large-font">Coding Quiz</div>
-      <h1>Welcome to the coding quiz! Let's test your knowledge on JavaScript</h1>
-      <button class="start-button">Start</button>
-    </header>
+      <div class="greeting">
+        <h1>Welcome to the coding quiz! Let's test your knowledge on JavaScript</h1>
+        <button class="start-button">Start</button>
+      </div>
+    
 
     <main>
      <!-- answers to the questions are hidden -->
       <div id="quiz-answers" class="hidden">
         <h3 id="questions"></h3>
-        <button id="ans1"></button>
-        <button id="ans2"></button>
-        <button id="ans3"></button>
-        <button id="ans4"></button>
+        <button id="answer-1"></button>
+        <button id="answer-2"></button>
+        <button id="answer-3"></button>
+        <button id="answer-4"></button>
     </div>
 
     <!-- displays response and results -->
@@ -37,7 +39,7 @@
 
     <section id="score-board">
       <p>Would you like to submit your score?</p>
-      <button id="submi-button">Submit</button>
+      <button id="submit-button">Submit</button>
       <div id="high-scores">
           <p>Highscores: </p>
       <section>

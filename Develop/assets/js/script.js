@@ -18,7 +18,86 @@ var submitButton = document.getElementById("submit-button");
 
 // Array of questions
 var quizQuestions = [
-  
+  {
+    question: "What is the correct way to declare a variable in JavaScript?",
+    answers: {
+        a: 'var x = 10',
+        b: 'let x = 10',
+        c: 'const x = 10',
+        d: 'all of the above'
+    },
+    correctAnswer: 'd'
+},
+{
+  question: "How do you write a comment in JavaScript?",
+  answers: {
+      a: '<!-- this is a comment -->',
+      b: '//this is a comment',
+      c: '/* this is a comment */',
+      d: 'this is a comment'
+  },
+  correctAnswer: 'b'
+},
+{
+  question: "Which built in method is used to convert a string to uppercase in JavaScript?",
+  answers: {
+      a: 'toUpperCase()',
+      b: 'upperCase()',
+      c: 'convertUpperCase()',
+      d: 'toUpper()'
+  },
+  correctAnswer: 'a'
+},
+{
+  question: "What does the '===' operator do in JavaScript",
+  answers: {
+      a: 'Compares two values for equality, ignoring their data type',
+      b: 'Compares two values for equality, including their data types',
+      c: 'Assigns a value to a variable',
+      d: 'Checks if a value is greater than or equal to another value'
+  },
+  correctAnswer: 'b'
+},
+{
+  question: "What does the 'typeOf' operator return in JavaScript",
+  answers: {
+      a: 'The type of a variable as a string',
+      b: 'The value of a variable',
+      c: 'The size of the array',
+      d: 'The data type of a variable as a boolean'
+  },
+  correctAnswer: 'a'
+},
+{
+  question: "Which function is used to output data in the browser's console in JavaScript?",
+  answers: {
+      a: 'console.log()',
+      b: 'alert()',
+      c: 'print()',
+      d: 'document.write()'
+  },
+  correctAnswer: 'a'
+},
+{
+  question: "How do you add an event listener to a button with the ID 'myButton' in Javascript?",
+  answers: {
+      a: "addEventListener('click', myFunction",
+      b: 'onclick = myFunction',
+      c: "myButton.addEventListener('click', myFunction)",
+      d: "on('click', myButton, myFunction)"
+  },
+  correctAnswer: 'c'
+},
+{
+  question: "Which statement is used to exit a loop prematurely in Javascript?",
+  answers: {
+      a: 'return',
+      b: 'exit',
+      c: 'stop',
+      d: 'break'
+  },
+  correctAnswer: 'd'
+},
 ]
 
 // The init function is called when the page loads 
