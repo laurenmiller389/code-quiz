@@ -1,3 +1,4 @@
+/*
 * {
   box-sizing: border-box;
 }
@@ -10,13 +11,6 @@ body {
   min-height: 100vh;
   justify-content: flex-start;
   background: linear-gradient(0deg, rgba(19,41,61,1) 0%, rgba(237,245,249,1) 63%);
-}
-
-.reset-button {
-  font-size: 16px;
-  height: 30px;
-  line-height: 8px;
-  margin-top: 20px;
 }
 
 .win-loss-container {
@@ -136,4 +130,72 @@ section {
   .timer {
     height: 200px;
   }
+ */
+
+ * {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: peachpuff;
+
+}
+
+body {
+
+}
+
+header {
+
+}
+
+main {
+
+}
+
+.time {
+  color: palevioletred;
+}
+
+#quiz {
+  margin: 20px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+h1 {
+  
+  margin: 10px;
+  text-align: center;
+  font-size: 24px;
+
+}
+
+#start {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+
+button:hover {
+   background-color: palevioletred;
  
+}
+
+#highscores {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+
+#submit {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+}

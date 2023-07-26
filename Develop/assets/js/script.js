@@ -153,6 +153,7 @@ function sendMessage() {
  }
 
 var questionIndex = 0
+var secondsLeft = 60
 
 function checkAnswer(event) {
   console.log(event.target.textContent)
@@ -169,12 +170,11 @@ function checkAnswer(event) {
   displayQuestion();
 }
 
-
-
 // Attach event listener to start button to call startGame function on click
-startButton.addEventListener("click", startQuiz);
-// Calls init() so that it fires when page opened
-init();
+startButton.addEventListener("click", function(){
+  startQuiz()
+  startTimer()
+});
 
 //listens for a click to answers
 a1Element.addEventListener('click', checkAnswer)
